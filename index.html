@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WebQuest: Become a Travel YouTuber!</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --forest:#1f4d3a; --leaf:#3d8b5f; --sea:#1f7a99; --sky:#d9eef2;
+  --sand:#f3e6c8; --paper:#fbf8ef; --sun:#f2b84b; --ink:#23312b; --white:#fff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;font-family:'Nunito',Verdana,sans-serif;font-size:1.125rem;line-height:1.7;color:var(--ink);background:var(--paper)}
+h1,h2,h3{font-family:'Fredoka','Trebuchet MS',sans-serif;font-weight:600;line-height:1.2;color:var(--forest);margin:0 0 .5em}
+h1{font-size:clamp(2.2rem,6vw,3.8rem);color:var(--white)}
+h2{font-size:clamp(1.7rem,4vw,2.3rem)}
+h3{font-size:1.3rem}
+a{color:var(--sea);font-weight:700}
+a:focus-visible,button:focus-visible{outline:3px solid var(--sun);outline-offset:3px;border-radius:4px}
+.wrap{max-width:900px;margin:0 auto;padding:0 20px}
+
+/* nav */
+nav{position:sticky;top:0;z-index:10;background:var(--forest);box-shadow:0 2px 8px rgba(0,0,0,.2)}
+nav ul{list-style:none;margin:0 auto;padding:8px 12px;max-width:960px;display:flex;flex-wrap:wrap;justify-content:center;gap:4px}
+nav a{display:block;padding:6px 14px;color:var(--white);text-decoration:none;border-radius:20px;font-size:1rem}
+nav a:hover{background:var(--leaf)}
+
+/* hero */
+header{background:linear-gradient(var(--sea),#6fb7c9 70%,var(--sky));text-align:center;padding:48px 20px 0;overflow:hidden}
+header p{color:var(--white);font-size:1.25rem;max-width:600px;margin:0 auto 8px}
+header svg{display:block;width:100%;max-width:1000px;margin:0 auto;height:auto}
+
+section{padding:56px 0}
+section:nth-of-type(even){background:var(--sand)}
+.card{background:var(--white);border-radius:18px;padding:22px 26px;box-shadow:0 3px 0 rgba(31,77,58,.15)}
+.callout{background:var(--sky);border-left:8px solid var(--sea);border-radius:12px;padding:16px 22px;margin:20px 0}
+.callout strong{color:var(--forest)}
+
+/* word chips */
+.chips{display:flex;flex-wrap:wrap;gap:10px;padding:0;list-style:none;margin:16px 0}
+.chips li{background:var(--white);border:2px solid var(--leaf);border-radius:30px;padding:4px 16px;font-weight:700;color:var(--forest)}
+
+/* objectives */
+.obj{list-style:none;padding:0;margin:0;display:grid;gap:14px}
+.obj li{display:flex;gap:16px;align-items:flex-start}
+.obj .ic{font-size:2rem;line-height:1.2}
+
+/* steps */
+ol.steps{list-style:none;counter-reset:s;padding:0;margin:0;display:grid;gap:16px}
+ol.steps li{counter-increment:s;display:flex;gap:18px;align-items:flex-start;background:var(--white);border-radius:18px;padding:18px 22px}
+ol.steps li::before{content:counter(s);flex:none;width:46px;height:46px;border-radius:50%;background:var(--forest);color:var(--white);font-family:'Fredoka',sans-serif;font-size:1.5rem;display:grid;place-items:center}
+ol.steps b{color:var(--forest)}
+
+/* grids */
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.btn{display:inline-block;margin-top:8px;background:var(--forest);color:var(--white);text-decoration:none;padding:10px 20px;border-radius:30px}
+.btn:hover{background:var(--leaf)}
+.btn.alt{background:var(--sun);color:var(--ink)}
+.btn.alt:hover{background:#f6c96b}
+.links{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.links li{background:var(--white);border-radius:12px;padding:12px 18px}
+.links span{display:block;font-size:.95rem;color:#51615a}
+
+footer{background:var(--forest);color:var(--white);text-align:center;padding:28px 20px;font-size:1rem}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media (max-width:560px){body{font-size:1.05rem}ol.steps li{flex-direction:column;gap:10px}}
+</style>
+</head>
+<body>
+
+<nav aria-label="Main menu">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#objectives">Objectives</a></li>
+    <li><a href="#steps">Steps</a></li>
+    <li><a href="#assessment">Assessment</a></li>
+    <li><a href="#resources">Resources</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+
+<header>
+  <h1>Become a Travel YouTuber!</h1>
+  <p>A WebQuest for 5th grade. Choose a place, give advice and share it with the world.</p>
+  <svg viewBox="0 0 1000 260" role="img" aria-label="Illustration of a sun, mountains, a volcano and the sea">
+    <circle cx="820" cy="80" r="46" fill="#f2b84b"/>
+    <path d="M0 200 L150 90 L260 170 L380 70 L520 200Z" fill="#3d8b5f"/>
+    <path d="M380 70 L412 108 L395 112 L380 100 L362 112 L348 100Z" fill="#fff" opacity=".9"/>
+    <path d="M520 200 L640 60 L690 60 L810 200Z" fill="#1f4d3a"/>
+    <path d="M640 60 L690 60 L680 44 L650 44Z" fill="#c8553d"/>
+    <path d="M660 44 Q652 20 668 2 Q672 26 682 44Z" fill="#c9d3d6" opacity=".8"/>
+    <path d="M0 200 Q250 170 500 200 T1000 195 V260 H0Z" fill="#fbf8ef" opacity=".35"/>
+    <path d="M0 225 Q125 205 250 225 T500 225 T750 225 T1000 225 V260 H0Z" fill="#f3e6c8"/>
+    <path d="M0 245 Q125 230 250 245 T500 245 T750 245 T1000 245 V260 H0Z" fill="#fbf8ef"/>
+  </svg>
+</header>
+
+<main>
+
+<section id="introduction">
+  <div class="wrap">
+    <h2>Introduction</h2>
+    <div class="card">
+      <p><strong>Have you ever wanted to be a YouTuber? Now is your chance!</strong></p>
+      <p>Imagine you are a travel YouTuber and you want to recommend an amazing place to your followers. Your mission is to create your own YouTube video and show everyone a place they should visit!</p>
+      <p>You can talk about a beautiful beach, a big park, a green mountain, a famous volcano or amazing cliffs. Tell us what people can <b>visit</b>, <b>see</b>, <b>eat</b>, <b>do</b> and where they can <b>stay</b>.</p>
+    </div>
+    <div class="callout">
+      <p style="margin:0">Don't forget to use the word <strong>"should"</strong> to give advice. For example:<br>
+      <em>"You should visit this beautiful beach!"</em></p>
+    </div>
+    <p>Be creative, have fun and get ready to share your favourite place with the world. <strong>Lights, camera, action!</strong></p>
+    <ul class="chips" aria-label="Useful words">
+      <li>mountain</li><li>beach</li><li>volcano</li><li>park</li><li>cliffs</li><li>should</li><li>shouldn't</li>
+    </ul>
+  </div>
+</section>
+
+<section id="objectives">
+  <div class="wrap">
+    <h2>Objectives</h2>
+    <p>By the end of this task, you will be able to:</p>
+    <ul class="obj">
+      <li class="card" style="display:flex">
+        <span class="ic" aria-hidden="true">🏔️</span>
+        <span><b>Use the new vocabulary and language.</b> mountain, beach, volcano, park, cliffs… and <em>should / shouldn't</em>.</span>
+      </li>
+      <li class="card" style="display:flex">
+        <span class="ic" aria-hidden="true">🗣️</span>
+        <span><b>Give clear advice to your viewers.</b></span>
+      </li>
+      <li class="card" style="display:flex">
+        <span class="ic" aria-hidden="true">🎬</span>
+        <span><b>Be creative and make an effort in your final video.</b></span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="steps">
+  <div class="wrap">
+    <h2>Steps to follow</h2>
+    <p>Follow the steps in order. Ask your teacher if you need help!</p>
+    <ol class="steps">
+      <li><div><b>Choose a place and write your recommendations.</b></div></li>
+      <li><div><b>Follow the tutorial to create your YouTube profile.</b>
+        <a class="btn" href="https://canva.link/youtube-tutorial" target="_blank" rel="noopener">Open YouTube tutorial</a></div></li>
+      <li><div><b>Record your video using the ideas you wrote.</b></div></li>
+      <li><div><b>Edit your video with the CapCut app.</b>
+        <a class="btn" href="https://canva.link/video-creation-steps-to-follow" target="_blank" rel="noopener">Open CapCut tutorial</a></div></li>
+      <li><div><b>Upload your final video to YouTube.</b></div></li>
+    </ol>
+  </div>
+</section>
+
+<section id="assessment">
+  <div class="wrap">
+    <h2>Assessment</h2>
+    <p>You will be assessed in three ways.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>👩‍🏫 Teacher rubric</h3>
+        <p>Your teacher evaluates your work.</p>
+        <a class="btn alt" href="rubrics.pdf#page=1" target="_blank" rel="noopener">Open PDF</a>
+      </div>
+      <div class="card">
+        <h3>🤝 Peer rubric</h3>
+        <p>You evaluate your classmates' videos.</p>
+        <a class="btn alt" href="rubrics.pdf#page=2" target="_blank" rel="noopener">Open PDF</a>
+      </div>
+      <div class="card">
+        <h3>🪞 Self-assessment</h3>
+        <p>You think about your own work.</p>
+        <a class="btn alt" href="rubrics.pdf#page=3" target="_blank" rel="noopener">Open PDF</a>
+      </div>
+    </div>
+    <details class="card" style="margin-top:22px">
+      <summary style="cursor:pointer;font-weight:700;color:var(--forest)">See all the rubrics here</summary>
+      <iframe src="rubrics.pdf" title="Rubrics: teachers, classmates and self-assessment" style="width:100%;height:560px;border:0;margin-top:14px;border-radius:8px"></iframe>
+      <p style="margin-bottom:0"><a href="rubrics.pdf" download>Download the PDF with the three rubrics</a></p>
+    </details>
+  </div>
+</section>
+
+<section id="resources">
+  <div class="wrap">
+    <h2>Resources</h2>
+    <h3>Our tutorials</h3>
+    <div class="grid" style="margin-bottom:28px">
+      <div class="card">
+        <h3>📺 How to create your YouTube profile and upload your video</h3>
+        <a class="btn" href="https://canva.link/youtube-tutorial" target="_blank" rel="noopener">Open tutorial</a>
+      </div>
+      <div class="card">
+        <h3>✂️ How to use CapCut</h3>
+        <a class="btn" href="https://canva.link/video-creation-steps-to-follow" target="_blank" rel="noopener">Open tutorial</a>
+      </div>
+    </div>
+
+    <h3>Learn the words</h3>
+    <ul class="links" style="margin-bottom:28px">
+      <li><a href="https://wordwall.net/resource/6875283/english/landscapes-and-natural-features-unit-9" target="_blank" rel="noopener">Wordwall: Landscapes and natural features</a>
+        <span>Play and practise the vocabulary.</span></li>
+    </ul>
+
+    <h3>Find ideas and places</h3>
+    <ul class="links">
+      <li><a href="https://kids.nationalgeographic.com/nature" target="_blank" rel="noopener">National Geographic Kids: Nature</a>
+        <span>Discover animals, plants and landscapes.</span></li>
+      <li><a href="https://www.google.es/intl/es/earth/index.html" target="_blank" rel="noopener">Google Earth</a>
+        <span>Explore the world from above.</span></li>
+      <li><a href="https://www.google.com/maps" target="_blank" rel="noopener">Google Maps</a>
+        <span>Find where your place is.</span></li>
+      <li><a href="https://www.worldwildlife.org/" target="_blank" rel="noopener">World Wildlife Fund</a>
+        <span>Learn how to protect nature.</span></li>
+      <li><a href="https://www.webtenerife.com/" target="_blank" rel="noopener">Web Tenerife</a>
+        <span>Beaches, mountains and a famous volcano.</span></li>
+      <li><a href="https://www.traveler.es/viajeros/galerias/paises-que-hay-que-visitar-una-vez-en-la-vida/2040" target="_blank" rel="noopener">Condé Nast Traveler: Countries to visit once in a lifetime</a>
+        <span>A photo gallery of amazing countries. Ask your teacher if you need help.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="conclusion">
+  <div class="wrap">
+    <h2>Conclusion</h2>
+    <div class="card">
+      <p><strong>Great job, travel YouTubers!</strong></p>
+      <p>By doing this activity, you have learned how to recommend places to other people and help them discover new places to visit. Your videos can help people learn about different places and understand why it is important to take care of nature and keep our beaches, mountains, parks and volcanoes clean.</p>
+      <p>You have also learned new words in English, how to describe places with adjectives and how to give advice using <em>should</em>. In addition, you have practised speaking English, sharing ideas, using technology and being creative.</p>
+      <p><strong>Remember, your words can help other people discover the world and protect our planet! 🌍</strong></p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p style="margin:0">A WebQuest for 5th grade English</p>
+</footer>
+
+</body>
+</html>
